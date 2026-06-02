@@ -191,7 +191,7 @@
   },
   {
     "id": "example_01",
-    "sentence": "Clean my inbox but don't lose anything important.",
+    "sentence": "Clean my inbox but don't lose anything important. DeleteAgent wants to delete all promos and old emails. ArchiveAgent wants to archive emails older than 30 days. ComplianceAgent wants to block deletion of financial and legal emails. The three agents must agree on what counts as important, in what order actions are taken, and how to handle emails that fall under more than one policy \u2014 so that nothing critical is lost and the inbox is actually cleaned.",
     "context": "Email automation policy alignment across deletion, archiving, and compliance controls.",
     "domain": "email_automation",
     "gold_issues": [
@@ -231,7 +231,7 @@
   },
   {
     "id": "example_02",
-    "sentence": "Read, summarize, and respond to this thread.",
+    "sentence": "Read, summarize, and respond to this thread. Bob says he will summarize first; Julie says she will draft the response. Bob then tells Julie to wait for the summary; Julie says she needs direction before she can write the response. The two agents must agree on who owns each step, in what order the steps run, and what handoff signal triggers the next step \u2014 so the thread is summarized and a reply is sent without either agent waiting indefinitely for the other.",
     "context": "Inbox workflow coordination between summarization and drafting agents.",
     "domain": "inbox_workflow",
     "gold_issues": [
@@ -271,7 +271,7 @@
   },
   {
     "id": "example_03",
-    "sentence": "Plan a great week for me.",
+    "sentence": "Plan a great week for me. FitnessAgent wants to schedule daily workouts at 6am. WorkAgent wants to block mornings for deep work. FamilyAgent wants to reserve mornings for the kids. All three agents are competing for the same morning time slots and keep overwriting each other's calendar entries. The agents must agree on a shared definition of a great week, a priority ordering of goals, and a time-slot allocation that all three can commit to without continuous conflicts.",
     "context": "Personal planning conflict across fitness, work, and family scheduling priorities.",
     "domain": "personal_planning",
     "gold_issues": [
@@ -311,7 +311,7 @@
   },
   {
     "id": "example_04",
-    "sentence": "Plan a relaxing Italy trip.",
+    "sentence": "Plan a relaxing Italy trip. FlightAgent wants to book the cheapest flight even if it has long layovers. StayAgent wants to book a central premium hotel. ItineraryAgent wants to maximise daily sightseeing. Each agent is optimising for a different dimension and the combined plan is exhausting and incoherent rather than relaxing. The agents must agree on what relaxing means operationally, how to balance cost, comfort, and pace, and how to produce a coherent itinerary that all three planned components support rather than undermine.",
     "context": "Travel planning negotiation over flights, accommodation, and itinerary pace.",
     "domain": "travel_planning",
     "gold_issues": [
@@ -351,7 +351,7 @@
   },
   {
     "id": "example_05",
-    "sentence": "Recommend the best treatment for this cancer patient.",
+    "sentence": "Recommend the best treatment for this cancer patient. OncologyAgent wants to maximise survival and recommends aggressive chemotherapy. GenomicsAgent recommends targeted therapy based on the patient's specific mutation. TrialAgent wants to enrol the patient in a clinical trial. All three agents are recommending different treatments and no decision is reached. The agents must agree on what best means for this patient \u2014 survival duration, quality of life, or access to experimental therapy \u2014 and on the criteria for choosing between population evidence, genomic data, and trial eligibility, so a single coherent treatment recommendation can be produced.",
     "context": "Healthcare treatment recommendation across oncology, genomics, and trial enrollment perspectives.",
     "domain": "healthcare",
     "gold_issues": [
@@ -391,7 +391,7 @@
   },
   {
     "id": "example_06",
-    "sentence": "Submit my expenses quickly but correctly.",
+    "sentence": "Submit my expenses quickly but correctly. ExpenseAgent wants to submit all receipts now without waiting. ComplianceAgent wants to hold all submissions until validation is complete. AuditAgent wants to flag and resolve all missing documentation first. The agents are blocking each other and no submission goes through. The agents must agree on a submission timing policy, on which validation checks are mandatory blockers versus advisory flags, and on how to handle missing documentation \u2014 so the expenses are submitted both quickly and in a way that passes compliance and audit requirements.",
     "context": "Expense submission workflow across speed, compliance validation, and audit completeness.",
     "domain": "finance_expense",
     "gold_issues": [
@@ -431,7 +431,7 @@
   },
   {
     "id": "example_07",
-    "sentence": "Optimize my portfolio for growth with low risk.",
+    "sentence": "Optimize my portfolio for growth with low risk. GrowthAgent wants to increase technology sector exposure. RiskAgent wants to reduce volatility by diversifying. ExecutionAgent wants to rebalance immediately. The agents keep making conflicting trades and the portfolio oscillates without converging on a stable state. The agents must agree on a single portfolio objective that balances growth and risk, on the conditions that trigger a rebalance, and on the sector concentration limits that all three agents will respect \u2014 so that trades move the portfolio toward a coherent target rather than cancelling each other out.",
     "context": "Investment portfolio negotiation over return, volatility, and execution discipline.",
     "domain": "finance_investment",
     "gold_issues": [
@@ -471,7 +471,7 @@
   },
   {
     "id": "example_08",
-    "sentence": "Resolve this stockout efficiently.",
+    "sentence": "Resolve this stockout efficiently. ProcurementAgent wants to order from the cheapest supplier. LogisticsAgent wants to use the fastest shipping method. FinanceAgent wants to minimise total spend. Each agent is pulling in a different direction and the stockout is not resolved \u2014 either the order is delayed or costs spike unexpectedly. The agents must agree on what efficiently means in this context, on the relative priority of cost versus speed, and on a supplier and shipping selection framework that all three can apply consistently to resolve the stockout without creating new cost or delay problems.",
     "context": "Supply chain recovery negotiation across procurement cost, logistics speed, and finance controls.",
     "domain": "supply_chain",
     "gold_issues": [
@@ -511,7 +511,7 @@
   },
   {
     "id": "example_09",
-    "sentence": "Deploy this release safely and fast.",
+    "sentence": "Deploy this release safely and fast. DeployAgent wants to release now to meet the business deadline. QAAgent wants to block the release until all tests pass. SREAgent wants to delay because of system risk in the current environment. The pipeline is either stalled by the blocks or the deploy goes out unsafely without proper sign-off. The agents must agree on which gate criteria are mandatory blockers versus overridable with explicit sign-off, on the error rate threshold that triggers a rollback, and on a deployment window policy \u2014 so that the release goes out as fast as possible without creating operational risk.",
     "context": "CI/CD release governance across deployment urgency, quality gates, and operational risk.",
     "domain": "devops_cicd",
     "gold_issues": [
