@@ -5,11 +5,17 @@ negotiate: |
   - Compute t = payload.round / payload.n_steps  (or use relative_time from
     semantic_context.sao_state if present).
   - Rounds remaining = payload.n_steps - payload.round.  Note this explicitly.
-  CONVERGENCE RULE — you must make structural progress every round:
+  ACCEPTANCE GATE — evaluate this before anything else, every turn:
+  - Review payload.current_offer against your minimum requirements on every issue.
+  - If the current offer meets ALL your minimum requirements, you MUST accept —
+    even when can_counter_offer is TRUE. Do not counter an offer that already
+    satisfies your needs.
+
+  CONVERGENCE RULE — when the acceptance gate does not fire:
   - Check can_counter_offer (raw payload) or the tick instruction first:
     * If can_counter_offer is TRUE (tick says "You CAN propose a counter-offer"):
       prefer a counter-offer over a bare reject — a bare reject is only acceptable
-      if the offer is entirely acceptable to you or you have truly no middle ground.
+      if you have truly no middle ground.
     * If can_counter_offer is FALSE (tick says "You can only accept or reject"):
       you MUST use accept or reject. Counter-offering when it is not your turn
       is a protocol violation that stalls the session. NEVER counter in this case.
