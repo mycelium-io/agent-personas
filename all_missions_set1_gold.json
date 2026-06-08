@@ -198,7 +198,16 @@
       "important emails",
       "promotion handling",
       "retention window",
-      "compliance exceptions"
+      "compliance exceptions",
+      "attachment handling",
+      "user confirmation requirement",
+      "newsletter and subscription policy",
+      "compliance scan timing",
+      "recovery window after deletion",
+      "thread-level vs message-level action",
+      "internal vs external sender treatment",
+      "audit logging of actions",
+      "calendar and meeting invites"
     ],
     "gold_options": {
       "important emails": [
@@ -220,6 +229,51 @@
         "Never delete emails containing legal, financial, tax, HR, or contract-related content",
         "Require a compliance check before deleting anything from regulated senders or domains",
         "Allow deletion only after compliance-safe emails are tagged and excluded automatically"
+      ],
+      "attachment handling": [
+        "Delete attachments along with their parent emails to reclaim storage immediately",
+        "Strip and archive attachments separately for 90 days even if the email is deleted",
+        "Retain attachments only when they appear to be invoices, contracts, or signed documents"
+      ],
+      "user confirmation requirement": [
+        "Auto-execute deletions in bulk without per-email user confirmation",
+        "Require user approval only for compliance-flagged or ambiguous items",
+        "Require explicit user sign-off before any destructive action on any email"
+      ],
+      "newsletter and subscription policy": [
+        "Delete newsletters immediately and auto-unsubscribe from the sender",
+        "Archive newsletters for 30 days then delete if unopened",
+        "Keep all newsletters indefinitely in a dedicated low-priority folder"
+      ],
+      "compliance scan timing": [
+        "Run compliance scans only on items already queued for deletion",
+        "Scan emails at ingestion time and tag regulated content immediately",
+        "Perform continuous re-scans of the entire mailbox on a weekly schedule"
+      ],
+      "recovery window after deletion": [
+        "Hard-delete immediately with no recovery option",
+        "Provide a 30-day soft-delete trash before permanent removal",
+        "Maintain a 1-year cold archive of all deleted items for restoration"
+      ],
+      "thread-level vs message-level action": [
+        "Act on individual messages independently regardless of thread context",
+        "Preserve the entire thread if any single message qualifies as important or compliance-sensitive",
+        "Delete older messages in a thread but retain the most recent reply"
+      ],
+      "internal vs external sender treatment": [
+        "Apply identical deletion rules to internal and external senders",
+        "Archive all internal company emails by default and only delete external clutter",
+        "Route external regulated-domain senders through compliance review before any action"
+      ],
+      "audit logging of actions": [
+        "Log only deletions and skip routine archive actions to minimize overhead",
+        "Maintain a full immutable audit log of every archive, delete, and compliance decision",
+        "Log compliance-relevant actions only and summarize bulk deletions in aggregate"
+      ],
+      "calendar and meeting invites": [
+        "Delete past meeting invites and responses older than 30 days",
+        "Archive all calendar-related mail for 90 days in case of dispute",
+        "Retain only invites tied to recurring meetings or external contracts"
       ]
     },
     "metadata": {
@@ -238,7 +292,16 @@
       "step ownership",
       "execution order",
       "handoff trigger",
-      "response authority"
+      "response authority",
+      "summary length and depth",
+      "handoff signal format",
+      "revision loop policy",
+      "urgency override behavior",
+      "recommendation specificity",
+      "factual correction rights",
+      "tone calibration source",
+      "thread scope boundary",
+      "failure escalation path"
     ],
     "gold_options": {
       "step ownership": [
@@ -260,6 +323,51 @@
         "Julie has final authority over tone and wording once the summary is accepted",
         "Bob approves factual accuracy and Julie approves final phrasing",
         "Final response requires a simple two-step sign-off from both agents"
+      ],
+      "summary length and depth": [
+        "Brief 2-3 sentence summary capturing only the core ask",
+        "Detailed structured summary with context, history, and stakeholder positions",
+        "Standard summary with bullet points for key facts and one-line context"
+      ],
+      "handoff signal format": [
+        "Plain text message saying 'ready for draft' with summary attached",
+        "Structured template with fields for summary, recommendation, tone, and urgency",
+        "Tagged status marker (e.g., [SUMMARY-READY]) plus inline summary block"
+      ],
+      "revision loop policy": [
+        "Julie may request one clarification round from Bob before drafting",
+        "No back-and-forth allowed; Julie drafts with whatever Bob provides",
+        "Unlimited clarification exchanges until Julie feels confident to draft"
+      ],
+      "urgency override behavior": [
+        "Julie may draft immediately without summary if thread is marked urgent",
+        "Sequential workflow holds regardless of urgency level",
+        "Bob produces an expedited one-line summary for urgent threads"
+      ],
+      "recommendation specificity": [
+        "Bob recommends a specific response action with suggested stance",
+        "Bob lists possible response options without picking one",
+        "Bob only flags decision points and leaves all action choice to Julie"
+      ],
+      "factual correction rights": [
+        "Bob can rewrite Julie's draft to fix factual errors directly",
+        "Bob flags factual issues and Julie decides how to incorporate fixes",
+        "Bob has veto on factual claims but cannot edit wording"
+      ],
+      "tone calibration source": [
+        "Bob specifies required tone in the summary handoff",
+        "Julie determines tone independently based on thread context",
+        "Tone is jointly agreed before drafting begins"
+      ],
+      "thread scope boundary": [
+        "Summary covers only the latest message in the thread",
+        "Summary covers the entire thread history end-to-end",
+        "Summary covers latest message plus referenced prior decisions"
+      ],
+      "failure escalation path": [
+        "If Bob's summary is late, Julie escalates to a human supervisor",
+        "If Bob's summary is late, Julie proceeds with her own summary",
+        "If Bob's summary is late, both wait until Bob completes it"
       ]
     },
     "metadata": {
@@ -278,7 +386,16 @@
       "definition of a great week",
       "morning allocation",
       "priority order",
-      "conflict resolution rule"
+      "conflict resolution rule",
+      "weekday 6am slot ownership",
+      "minimum daily workout duration",
+      "deep work start time",
+      "weekend schedule treatment",
+      "handling of work deadline weeks",
+      "school run coverage on conflict days",
+      "interruption policy during deep work",
+      "displaced-slot makeup mechanism",
+      "evening time allocation"
     ],
     "gold_options": {
       "definition of a great week": [
@@ -300,6 +417,51 @@
         "The highest-priority weekly target wins the slot conflict",
         "Use a rotating schedule so no agent permanently controls mornings",
         "Require a compromise swap whenever one agent displaces another from a preferred slot"
+      ],
+      "weekday 6am slot ownership": [
+        "Fitness owns 6am-7am every weekday for workouts",
+        "Fitness gets 6am three days, family gets 6am two days for prep",
+        "6am rotates weekly between fitness, early work prep, and family"
+      ],
+      "minimum daily workout duration": [
+        "Full 60-minute workout every weekday",
+        "45-minute workouts weekdays with longer sessions on weekends",
+        "30-minute minimum on busy days, 60 minutes when schedule allows"
+      ],
+      "deep work start time": [
+        "Deep work begins at 9am sharp every weekday",
+        "Deep work starts at 10am to accommodate family and fitness",
+        "Start time varies by day based on agreed weekly priorities"
+      ],
+      "weekend schedule treatment": [
+        "Weekends fully reserved for family with no work or scheduled fitness",
+        "Weekends allow optional catch-up work and longer family-fitness combined activities",
+        "Weekends mirror weekdays with lighter intensity across all three domains"
+      ],
+      "handling of work deadline weeks": [
+        "Deadline weeks suspend fitness and reduce family time to minimums",
+        "Deadlines extend work hours into evenings only, preserving morning routines",
+        "Deadlines trigger a pre-agreed temporary reallocation with make-up time after"
+      ],
+      "school run coverage on conflict days": [
+        "Family agent always wins the 7-9am school run slot regardless of other needs",
+        "School run is covered but breakfast time can shrink to 20 minutes if needed",
+        "Alternate-day arrangement where other priorities can claim part of the window"
+      ],
+      "interruption policy during deep work": [
+        "Zero interruptions allowed in 9am-12pm block except true emergencies",
+        "One scheduled 10-minute family check-in permitted mid-morning",
+        "Interruptions allowed if pre-negotiated the prior evening"
+      ],
+      "displaced-slot makeup mechanism": [
+        "Displaced agent gets guaranteed equivalent slot within 48 hours",
+        "Displaced time is logged and reconciled at week's end",
+        "No makeup required; displacement is absorbed as cost of flexibility"
+      ],
+      "evening time allocation": [
+        "Evenings strictly reserved for family with no work or fitness spillover",
+        "Evenings available as overflow for work catch-up when mornings were lost",
+        "Evenings split between family dinner and optional light work or fitness"
       ]
     },
     "metadata": {
@@ -318,7 +480,16 @@
       "definition of relaxing",
       "flight tradeoff",
       "hotel standard",
-      "daily itinerary pace"
+      "daily itinerary pace",
+      "trip duration",
+      "layover length tolerance",
+      "intercity transit mode",
+      "attraction ticket strategy",
+      "arrival day plan",
+      "meal budget approach",
+      "number of cities visited",
+      "booking flexibility",
+      "guided tour usage"
     ],
     "gold_options": {
       "definition of relaxing": [
@@ -340,6 +511,51 @@
         "Light pace with one anchor activity and long breaks",
         "Moderate pace with two planned activities and flexible free time",
         "Dense sightseeing schedule maximizing major landmarks each day"
+      ],
+      "trip duration": [
+        "Short 5-day trip to minimize total cost",
+        "Balanced 7-9 day trip covering key cities",
+        "Extended 10+ day trip to maximize sightseeing depth"
+      ],
+      "layover length tolerance": [
+        "Accept layovers up to 10+ hours for maximum savings",
+        "Accept moderate layovers of 3-6 hours",
+        "Limit layovers to under 2 hours to preserve trip energy"
+      ],
+      "intercity transit mode": [
+        "Cheap overnight buses or budget regional flights",
+        "Standard high-speed rail between cities",
+        "Private transfers or first-class rail for comfort"
+      ],
+      "attraction ticket strategy": [
+        "Free or low-cost sites only to preserve budget",
+        "Mix of paid major landmarks and free walking sites",
+        "Pre-booked skip-the-line passes for all top attractions"
+      ],
+      "arrival day plan": [
+        "Schedule sightseeing immediately after landing",
+        "Light orientation walk and early hotel check-in",
+        "Full rest day at the hotel to recover from flight"
+      ],
+      "meal budget approach": [
+        "Street food and supermarket meals to save money",
+        "Mix of casual trattorias and occasional nicer dinners",
+        "Curated restaurant experiences as part of sightseeing"
+      ],
+      "number of cities visited": [
+        "Single-base trip in one city to minimize transit",
+        "Two cities with one mid-trip transfer",
+        "Multi-city tour covering 3+ destinations"
+      ],
+      "booking flexibility": [
+        "Non-refundable bookings for lowest prices",
+        "Partially flexible bookings with modest fees",
+        "Fully refundable bookings prioritizing peace of mind"
+      ],
+      "guided tour usage": [
+        "Self-guided exploration using free apps and maps",
+        "Selective half-day guided tours at key sites",
+        "Daily guided tours to maximize informed sightseeing"
       ]
     },
     "metadata": {
@@ -358,7 +574,15 @@
       "primary treatment goal",
       "evidence basis",
       "trial participation",
-      "treatment aggressiveness"
+      "treatment aggressiveness",
+      "biomarker testing timeline",
+      "trial eligibility screening",
+      "toxicity management threshold",
+      "response assessment frequency",
+      "treatment switching criteria",
+      "cost and access considerations",
+      "patient decision authority",
+      "off-trial targeted drug access"
     ],
     "gold_options": {
       "primary treatment goal": [
@@ -380,6 +604,46 @@
         "Aggressive multi-modal treatment with maximum disease control intent",
         "Moderate-intensity treatment that preserves function and tolerability",
         "Stepwise escalation starting with the least burdensome viable therapy"
+      ],
+      "biomarker testing timeline": [
+        "Delay treatment start until comprehensive genomic profiling returns",
+        "Begin standard chemotherapy immediately and adjust if mutations are found later",
+        "Start a brief bridging therapy while expedited genomic testing is run in parallel"
+      ],
+      "trial eligibility screening": [
+        "Complete full trial eligibility workup before initiating any therapy",
+        "Run eligibility screening concurrently with starting first-line treatment",
+        "Skip trial screening and proceed directly with standard-of-care chemotherapy"
+      ],
+      "toxicity management threshold": [
+        "Tolerate grade 3-4 toxicities to preserve dose intensity",
+        "Reduce or pause therapy at grade 2 toxicity to protect quality of life",
+        "Use prophylactic supportive care and reassess at first significant toxicity"
+      ],
+      "response assessment frequency": [
+        "Imaging and biomarker reassessment every 4 weeks for rapid course correction",
+        "Standard restaging at 8-12 week intervals per guideline",
+        "Adaptive monitoring driven by symptom changes and circulating tumor DNA shifts"
+      ],
+      "treatment switching criteria": [
+        "Switch regimens only on confirmed radiographic progression",
+        "Switch on early molecular or ctDNA progression signals before imaging change",
+        "Pre-define mutation-specific switch triggers tied to resistance markers"
+      ],
+      "cost and access considerations": [
+        "Prioritize the regimen with strongest efficacy regardless of cost",
+        "Prefer trial enrollment to eliminate drug cost burden on the patient",
+        "Choose the most cost-effective evidence-based regimen within insurance coverage"
+      ],
+      "patient decision authority": [
+        "Clinician team selects the regimen and presents it as the recommended plan",
+        "Equal shared decision-making with the patient weighing all three options",
+        "Patient preference is decisive after structured education on tradeoffs"
+      ],
+      "off-trial targeted drug access": [
+        "Pursue compassionate use or off-label targeted therapy if trial is unavailable",
+        "Restrict targeted agents to on-label or on-trial use only",
+        "Allow off-label targeted therapy only after standard chemotherapy fails"
       ]
     },
     "metadata": {
@@ -398,7 +662,16 @@
       "submission timing",
       "validation depth",
       "missing documentation handling",
-      "exception approval path"
+      "exception approval path",
+      "receipt threshold for documentation",
+      "post-submission correction window",
+      "validation turnaround sla",
+      "audit sampling rate",
+      "duplicate detection enforcement",
+      "policy violation handling",
+      "responsibility for missing receipts",
+      "escalation trigger for disputes",
+      "reporting cadence to stakeholders"
     ],
     "gold_options": {
       "submission timing": [
@@ -420,6 +693,51 @@
         "Manager approval before submission for policy exceptions",
         "Finance approval only for items above a defined threshold",
         "Post-submit audit review for low-value exceptions with full pre-approval only for high-risk cases"
+      ],
+      "receipt threshold for documentation": [
+        "Require receipts only for expenses above a high dollar threshold",
+        "Require receipts for all expenses regardless of amount",
+        "Tiered receipt requirements based on category and amount"
+      ],
+      "post-submission correction window": [
+        "Allow corrections and amendments up to 30 days after submission",
+        "Allow corrections only within 48 hours of submission",
+        "No post-submission corrections; resubmit as new expense report"
+      ],
+      "validation turnaround sla": [
+        "Same-day validation with hard 4-hour turnaround",
+        "Next-business-day validation as standard",
+        "Validation completed within 15 minutes for fast-track items"
+      ],
+      "audit sampling rate": [
+        "Audit every submitted expense in full",
+        "Risk-based sampling of 10-20% of low-risk items",
+        "Audit only items flagged by automated rules or above threshold"
+      ],
+      "duplicate detection enforcement": [
+        "Hard block on any suspected duplicate until manually cleared",
+        "Flag suspected duplicates but allow submission with reviewer note",
+        "Detect duplicates only in post-submission audit sweep"
+      ],
+      "policy violation handling": [
+        "Block submission on any policy violation regardless of severity",
+        "Block only material violations; advisory flags for minor ones",
+        "Submit all and resolve violations through post-submit clawback"
+      ],
+      "responsibility for missing receipts": [
+        "Submitter must obtain duplicate receipt from vendor before filing",
+        "Manager attestation substitutes for missing receipt up to a cap",
+        "Auto-generated affidavit accepted for any missing receipt"
+      ],
+      "escalation trigger for disputes": [
+        "Escalate to finance director on any agent disagreement",
+        "Escalate only when item exceeds defined risk or dollar threshold",
+        "Resolve disputes via automated rule precedence with no escalation"
+      ],
+      "reporting cadence to stakeholders": [
+        "Real-time dashboard of all submissions and flags",
+        "Daily summary report of exceptions and pending items",
+        "Weekly compliance and audit roll-up only"
       ]
     },
     "metadata": {
@@ -438,7 +756,16 @@
       "portfolio objective",
       "sector exposure",
       "rebalancing trigger",
-      "risk ceiling"
+      "risk ceiling",
+      "single stock position cap",
+      "portfolio beta threshold",
+      "execution speed",
+      "cash buffer level",
+      "hedging strategy",
+      "pre-trade risk check",
+      "drift tolerance band",
+      "tax and cost sensitivity",
+      "review frequency"
     ],
     "gold_options": {
       "portfolio objective": [
@@ -460,6 +787,51 @@
         "Accept higher volatility for stronger expected returns",
         "Set a moderate volatility and drawdown ceiling",
         "Use strict risk controls even if they materially reduce upside"
+      ],
+      "single stock position cap": [
+        "Allow up to 15% in a single high-conviction growth name",
+        "Cap any single stock at 8% of portfolio value",
+        "Limit any single position to 5% to ensure diversification"
+      ],
+      "portfolio beta threshold": [
+        "Allow portfolio beta up to 1.4 to maximize upside",
+        "Hold portfolio beta between 1.0 and 1.2",
+        "Keep portfolio beta at or below 1.0 versus benchmark"
+      ],
+      "execution speed": [
+        "Execute the full rebalance in a single trading session",
+        "Phase execution over 2-3 days using VWAP to limit market impact",
+        "Stage execution over a full week with strict slippage controls"
+      ],
+      "cash buffer level": [
+        "Hold near-zero cash to stay fully invested in growth assets",
+        "Maintain a 3-5% cash buffer for tactical flexibility",
+        "Hold 10%+ cash as a volatility dampener and dry powder"
+      ],
+      "hedging strategy": [
+        "No hedges \u2014 accept full directional exposure",
+        "Use selective put options on concentrated tech positions",
+        "Maintain systematic index put overlay to cap drawdowns"
+      ],
+      "pre-trade risk check": [
+        "Skip formal pre-trade checks if target weights are agreed",
+        "Run an automated beta and concentration check before sending orders",
+        "Require full risk committee sign-off including stress tests before execution"
+      ],
+      "drift tolerance band": [
+        "Trigger rebalance on any drift above 1% from target",
+        "Use a 3-5% drift band before initiating trades",
+        "Only rebalance when drift exceeds 7% or risk limits breach"
+      ],
+      "tax and cost sensitivity": [
+        "Ignore tax lots and transaction costs to achieve target quickly",
+        "Optimize tax-lot selection while still executing within the day",
+        "Defer trades that trigger material short-term capital gains"
+      ],
+      "review frequency": [
+        "Review allocation weekly with active tilts",
+        "Review monthly with quarterly formal rebalance",
+        "Review semi-annually to minimize churn and overreaction"
       ]
     },
     "metadata": {
@@ -478,7 +850,16 @@
       "definition of efficiency",
       "supplier choice",
       "shipping method",
-      "spend ceiling"
+      "spend ceiling",
+      "order quantity strategy",
+      "stockout cost quantification",
+      "approval authority for premium spend",
+      "supplier vetting depth",
+      "payment terms with supplier",
+      "inventory allocation priority",
+      "communication to affected customers",
+      "post-incident contractual remedy",
+      "freight consolidation tradeoff"
     ],
     "gold_options": {
       "definition of efficiency": [
@@ -500,6 +881,51 @@
         "Allow emergency overspend with later approval",
         "Stay within a pre-defined emergency budget unless executive approval is obtained",
         "Treat stockout recovery as exempt from normal spend caps for critical items"
+      ],
+      "order quantity strategy": [
+        "Order extra safety stock to prevent recurrence",
+        "Order only the quantity needed to clear the current stockout",
+        "Order the immediate gap plus a modest buffer based on demand variance"
+      ],
+      "stockout cost quantification": [
+        "Use worst-case lost-revenue estimates to justify premium logistics",
+        "Require a documented per-day stockout cost figure before any premium approval",
+        "Use a pre-agreed standard stockout cost rate for rapid decisions"
+      ],
+      "approval authority for premium spend": [
+        "Logistics can authorize premium shipping unilaterally during active stockouts",
+        "Finance must approve every premium shipping or supplier upgrade in writing",
+        "Pre-set thresholds allow auto-approval up to a cap, escalation beyond"
+      ],
+      "supplier vetting depth": [
+        "Skip standard vetting for speed and accept reputational risk",
+        "Run full quality and compliance vetting even under stockout pressure",
+        "Apply an abbreviated emergency-vetting checklist for new suppliers"
+      ],
+      "payment terms with supplier": [
+        "Pay upfront or on rush terms to secure priority production",
+        "Insist on standard net-30 or net-60 terms regardless of urgency",
+        "Accept partial prepayment in exchange for guaranteed lead time"
+      ],
+      "inventory allocation priority": [
+        "Ship arriving stock first to highest-revenue customers",
+        "Allocate strictly by order date regardless of customer tier",
+        "Reserve a portion for top customers and fulfill remainder by FIFO"
+      ],
+      "communication to affected customers": [
+        "Proactively notify customers and offer compensation immediately",
+        "Withhold notification until replenishment ETA is firmly confirmed",
+        "Notify only customers whose orders will miss committed delivery dates"
+      ],
+      "post-incident contractual remedy": [
+        "Pursue penalty claims against the supplier whose delay caused the stockout",
+        "Preserve the supplier relationship and absorb the cost internally",
+        "Negotiate future price concessions or priority capacity in lieu of penalties"
+      ],
+      "freight consolidation tradeoff": [
+        "Ship each SKU as soon as ready, accepting higher per-unit freight",
+        "Wait to consolidate full shipments to minimize freight cost",
+        "Consolidate only non-critical SKUs and expedite the stockout items separately"
       ]
     },
     "metadata": {
@@ -518,7 +944,16 @@
       "release gate criteria",
       "testing threshold",
       "risk tolerance",
-      "rollback trigger"
+      "rollback trigger",
+      "deployment window timing",
+      "canary rollout strategy",
+      "risk acceptance authority",
+      "flaky test handling",
+      "post-release monitoring duration",
+      "hotfix vs planned release scope",
+      "severity threshold for blocking",
+      "rollback decision authority",
+      "communication and disclosure"
     ],
     "gold_options": {
       "release gate criteria": [
@@ -540,6 +975,51 @@
         "Rollback immediately on defined error-rate or latency threshold breach",
         "Monitor briefly after release and rollback only if the signal persists",
         "Rollback only after both technical threshold breach and human confirmation"
+      ],
+      "deployment window timing": [
+        "Deploy now within the business hours window regardless of current error rates",
+        "Deploy only when production error rates fall below the agreed SLO threshold",
+        "Deploy in a staggered window that opens once error rates trend downward for 30 minutes"
+      ],
+      "canary rollout strategy": [
+        "Skip canary and roll out to 100% of traffic immediately to meet the deadline",
+        "Require a full multi-stage canary (1%, 10%, 50%, 100%) with bake time at each step",
+        "Use an abbreviated canary at 5% and 50% with shortened bake times"
+      ],
+      "risk acceptance authority": [
+        "Release lead alone may sign off on waiving any blocking signal",
+        "Require written risk acceptance from on-call SRE lead and QA lead jointly",
+        "Engineering manager sign-off suffices for non-critical waivers, on-call lead required for system risk"
+      ],
+      "flaky test handling": [
+        "Auto-retry failing tests and pass if any retry succeeds",
+        "Treat all failing tests as blocking until root-caused regardless of flakiness history",
+        "Quarantine tests on a documented flaky-list and require ticket plus owner before bypass"
+      ],
+      "post-release monitoring duration": [
+        "Standard monitoring ends 15 minutes after full rollout",
+        "Heightened monitoring with on-call attention for at least 24 hours post-release",
+        "Heightened monitoring for 2 hours then revert to standard alerting"
+      ],
+      "hotfix vs planned release scope": [
+        "Treat today's release as a hotfix with reduced regression scope",
+        "Treat as a full planned release requiring complete regression suite",
+        "Split the change: ship critical fix as hotfix today, defer non-urgent changes to next planned release"
+      ],
+      "severity threshold for blocking": [
+        "Only Sev-1 critical defects block the release",
+        "Any Sev-1 or Sev-2 defect blocks the release",
+        "Sev-1 blocks; Sev-2 blocks unless explicitly waived with documented mitigation"
+      ],
+      "rollback decision authority": [
+        "Automated system rolls back unilaterally on threshold breach with no human gate",
+        "Rollback requires explicit approval from release lead and on-call SRE",
+        "Automated rollback on hard breach, human-confirmed rollback on soft breach"
+      ],
+      "communication and disclosure": [
+        "Release silently and announce only if incidents occur",
+        "Send pre-release notice to all stakeholders and post-release status update with known risks",
+        "Notify only directly affected teams and on-call channels before deploy"
       ]
     },
     "metadata": {
