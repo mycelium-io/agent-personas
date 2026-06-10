@@ -197,17 +197,10 @@
     "gold_issues": [
       "important emails",
       "promotion handling",
-      "retention window",
       "compliance exceptions",
-      "attachment handling",
-      "user confirmation requirement",
       "newsletter and subscription policy",
-      "compliance scan timing",
       "recovery window after deletion",
-      "thread-level vs message-level action",
-      "internal vs external sender treatment",
-      "audit logging of actions",
-      "calendar and meeting invites"
+      "audit logging of actions"
     ],
     "gold_options": {
       "important emails": [
@@ -220,65 +213,30 @@
         "Archive promotional emails for 30 days before deletion unless manually restored",
         "Keep promotional emails only if they include receipts, invoices, warranties, or account actions"
       ],
-      "retention window": [
-        "Delete non-important clutter after 14 days",
-        "Archive non-important mail for 30 days before deletion",
-        "Retain all non-flagged mail for 90 days before any destructive action"
-      ],
       "compliance exceptions": [
         "Never delete emails containing legal, financial, tax, HR, or contract-related content",
         "Require a compliance check before deleting anything from regulated senders or domains",
         "Allow deletion only after compliance-safe emails are tagged and excluded automatically"
-      ],
-      "attachment handling": [
-        "Delete attachments along with their parent emails to reclaim storage immediately",
-        "Strip and archive attachments separately for 90 days even if the email is deleted",
-        "Retain attachments only when they appear to be invoices, contracts, or signed documents"
-      ],
-      "user confirmation requirement": [
-        "Auto-execute deletions in bulk without per-email user confirmation",
-        "Require user approval only for compliance-flagged or ambiguous items",
-        "Require explicit user sign-off before any destructive action on any email"
       ],
       "newsletter and subscription policy": [
         "Delete newsletters immediately and auto-unsubscribe from the sender",
         "Archive newsletters for 30 days then delete if unopened",
         "Keep all newsletters indefinitely in a dedicated low-priority folder"
       ],
-      "compliance scan timing": [
-        "Run compliance scans only on items already queued for deletion",
-        "Scan emails at ingestion time and tag regulated content immediately",
-        "Perform continuous re-scans of the entire mailbox on a weekly schedule"
-      ],
       "recovery window after deletion": [
         "Hard-delete immediately with no recovery option",
         "Provide a 30-day soft-delete trash before permanent removal",
         "Maintain a 1-year cold archive of all deleted items for restoration"
       ],
-      "thread-level vs message-level action": [
-        "Act on individual messages independently regardless of thread context",
-        "Preserve the entire thread if any single message qualifies as important or compliance-sensitive",
-        "Delete older messages in a thread but retain the most recent reply"
-      ],
-      "internal vs external sender treatment": [
-        "Apply identical deletion rules to internal and external senders",
-        "Archive all internal company emails by default and only delete external clutter",
-        "Route external regulated-domain senders through compliance review before any action"
-      ],
       "audit logging of actions": [
         "Log only deletions and skip routine archive actions to minimize overhead",
         "Maintain a full immutable audit log of every archive, delete, and compliance decision",
         "Log compliance-relevant actions only and summarize bulk deletions in aggregate"
-      ],
-      "calendar and meeting invites": [
-        "Delete past meeting invites and responses older than 30 days",
-        "Archive all calendar-related mail for 90 days in case of dispute",
-        "Retain only invites tied to recurring meetings or external contracts"
       ]
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 6,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 01 - Email Automation"
     }
@@ -290,29 +248,16 @@
     "domain": "inbox_workflow",
     "gold_issues": [
       "step ownership",
-      "execution order",
       "handoff trigger",
       "response authority",
       "summary length and depth",
-      "handoff signal format",
-      "revision loop policy",
-      "urgency override behavior",
-      "recommendation specificity",
-      "factual correction rights",
-      "tone calibration source",
-      "thread scope boundary",
-      "failure escalation path"
+      "handoff signal format"
     ],
     "gold_options": {
       "step ownership": [
         "Bob owns summarization and Julie owns drafting",
         "Julie drafts only after Bob produces a summary and recommendation",
         "Both contribute but Bob is responsible for summary quality and Julie for final wording"
-      ],
-      "execution order": [
-        "Read thread, summarize, approve summary, then draft response",
-        "Read and summarize in parallel with a draft skeleton that is finalized after summary",
-        "Bob summarizes first, Julie drafts second, Bob reviews third"
       ],
       "handoff trigger": [
         "Summary complete when action items, decision points, and recipient intent are explicitly listed",
@@ -333,46 +278,11 @@
         "Plain text message saying 'ready for draft' with summary attached",
         "Structured template with fields for summary, recommendation, tone, and urgency",
         "Tagged status marker (e.g., [SUMMARY-READY]) plus inline summary block"
-      ],
-      "revision loop policy": [
-        "Julie may request one clarification round from Bob before drafting",
-        "No back-and-forth allowed; Julie drafts with whatever Bob provides",
-        "Unlimited clarification exchanges until Julie feels confident to draft"
-      ],
-      "urgency override behavior": [
-        "Julie may draft immediately without summary if thread is marked urgent",
-        "Sequential workflow holds regardless of urgency level",
-        "Bob produces an expedited one-line summary for urgent threads"
-      ],
-      "recommendation specificity": [
-        "Bob recommends a specific response action with suggested stance",
-        "Bob lists possible response options without picking one",
-        "Bob only flags decision points and leaves all action choice to Julie"
-      ],
-      "factual correction rights": [
-        "Bob can rewrite Julie's draft to fix factual errors directly",
-        "Bob flags factual issues and Julie decides how to incorporate fixes",
-        "Bob has veto on factual claims but cannot edit wording"
-      ],
-      "tone calibration source": [
-        "Bob specifies required tone in the summary handoff",
-        "Julie determines tone independently based on thread context",
-        "Tone is jointly agreed before drafting begins"
-      ],
-      "thread scope boundary": [
-        "Summary covers only the latest message in the thread",
-        "Summary covers the entire thread history end-to-end",
-        "Summary covers latest message plus referenced prior decisions"
-      ],
-      "failure escalation path": [
-        "If Bob's summary is late, Julie escalates to a human supervisor",
-        "If Bob's summary is late, Julie proceeds with her own summary",
-        "If Bob's summary is late, both wait until Bob completes it"
       ]
     },
     "metadata": {
       "difficulty": "easy",
-      "num_issues": 4,
+      "num_issues": 5,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 02 - Inbox Thread Workflow"
     }
@@ -394,7 +304,6 @@
       "handling of work deadline weeks",
       "school run coverage on conflict days",
       "interruption policy during deep work",
-      "displaced-slot makeup mechanism",
       "evening time allocation"
     ],
     "gold_options": {
@@ -453,11 +362,6 @@
         "One scheduled 10-minute family check-in permitted mid-morning",
         "Interruptions allowed if pre-negotiated the prior evening"
       ],
-      "displaced-slot makeup mechanism": [
-        "Displaced agent gets guaranteed equivalent slot within 48 hours",
-        "Displaced time is logged and reconciled at week's end",
-        "No makeup required; displacement is absorbed as cost of flexibility"
-      ],
       "evening time allocation": [
         "Evenings strictly reserved for family with no work or fitness spillover",
         "Evenings available as overflow for work catch-up when mornings were lost",
@@ -466,7 +370,7 @@
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 12,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 03 - Personal Planning"
     }
@@ -488,8 +392,7 @@
       "arrival day plan",
       "meal budget approach",
       "number of cities visited",
-      "booking flexibility",
-      "guided tour usage"
+      "booking flexibility"
     ],
     "gold_options": {
       "definition of relaxing": [
@@ -551,16 +454,11 @@
         "Non-refundable bookings for lowest prices",
         "Partially flexible bookings with modest fees",
         "Fully refundable bookings prioritizing peace of mind"
-      ],
-      "guided tour usage": [
-        "Self-guided exploration using free apps and maps",
-        "Selective half-day guided tours at key sites",
-        "Daily guided tours to maximize informed sightseeing"
       ]
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 12,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 04 - Travel Planning"
     }
@@ -648,7 +546,7 @@
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 12,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 05 - Healthcare Treatment"
     }
@@ -669,9 +567,7 @@
       "audit sampling rate",
       "duplicate detection enforcement",
       "policy violation handling",
-      "responsibility for missing receipts",
-      "escalation trigger for disputes",
-      "reporting cadence to stakeholders"
+      "responsibility for missing receipts"
     ],
     "gold_options": {
       "submission timing": [
@@ -728,21 +624,11 @@
         "Submitter must obtain duplicate receipt from vendor before filing",
         "Manager attestation substitutes for missing receipt up to a cap",
         "Auto-generated affidavit accepted for any missing receipt"
-      ],
-      "escalation trigger for disputes": [
-        "Escalate to finance director on any agent disagreement",
-        "Escalate only when item exceeds defined risk or dollar threshold",
-        "Resolve disputes via automated rule precedence with no escalation"
-      ],
-      "reporting cadence to stakeholders": [
-        "Real-time dashboard of all submissions and flags",
-        "Daily summary report of exceptions and pending items",
-        "Weekly compliance and audit roll-up only"
       ]
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 11,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 06 - Expense Submission"
     }
@@ -760,8 +646,6 @@
       "single stock position cap",
       "portfolio beta threshold",
       "execution speed",
-      "cash buffer level",
-      "hedging strategy",
       "pre-trade risk check",
       "drift tolerance band",
       "tax and cost sensitivity",
@@ -803,16 +687,6 @@
         "Phase execution over 2-3 days using VWAP to limit market impact",
         "Stage execution over a full week with strict slippage controls"
       ],
-      "cash buffer level": [
-        "Hold near-zero cash to stay fully invested in growth assets",
-        "Maintain a 3-5% cash buffer for tactical flexibility",
-        "Hold 10%+ cash as a volatility dampener and dry powder"
-      ],
-      "hedging strategy": [
-        "No hedges \u2014 accept full directional exposure",
-        "Use selective put options on concentrated tech positions",
-        "Maintain systematic index put overlay to cap drawdowns"
-      ],
       "pre-trade risk check": [
         "Skip formal pre-trade checks if target weights are agreed",
         "Run an automated beta and concentration check before sending orders",
@@ -836,7 +710,7 @@
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 11,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 07 - Investment Portfolio"
     }
@@ -847,7 +721,6 @@
     "context": "Supply chain recovery negotiation across procurement cost, logistics speed, and finance controls.",
     "domain": "supply_chain",
     "gold_issues": [
-      "definition of efficiency",
       "supplier choice",
       "shipping method",
       "spend ceiling",
@@ -857,16 +730,9 @@
       "supplier vetting depth",
       "payment terms with supplier",
       "inventory allocation priority",
-      "communication to affected customers",
-      "post-incident contractual remedy",
       "freight consolidation tradeoff"
     ],
     "gold_options": {
-      "definition of efficiency": [
-        "Restore stock as fast as possible regardless of premium logistics cost",
-        "Balance cost and speed using a target service-restoration window",
-        "Minimize total spend unless the stockout cost clearly exceeds the premium"
-      ],
       "supplier choice": [
         "Choose the cheapest qualified supplier",
         "Choose the supplier with the shortest reliable lead time",
@@ -912,16 +778,6 @@
         "Allocate strictly by order date regardless of customer tier",
         "Reserve a portion for top customers and fulfill remainder by FIFO"
       ],
-      "communication to affected customers": [
-        "Proactively notify customers and offer compensation immediately",
-        "Withhold notification until replenishment ETA is firmly confirmed",
-        "Notify only customers whose orders will miss committed delivery dates"
-      ],
-      "post-incident contractual remedy": [
-        "Pursue penalty claims against the supplier whose delay caused the stockout",
-        "Preserve the supplier relationship and absorb the cost internally",
-        "Negotiate future price concessions or priority capacity in lieu of penalties"
-      ],
       "freight consolidation tradeoff": [
         "Ship each SKU as soon as ready, accepting higher per-unit freight",
         "Wait to consolidate full shipments to minimize freight cost",
@@ -930,7 +786,7 @@
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 10,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 08 - Supply Chain Stockout"
     }
@@ -943,17 +799,12 @@
     "gold_issues": [
       "release gate criteria",
       "testing threshold",
-      "risk tolerance",
       "rollback trigger",
       "deployment window timing",
-      "canary rollout strategy",
       "risk acceptance authority",
-      "flaky test handling",
-      "post-release monitoring duration",
       "hotfix vs planned release scope",
       "severity threshold for blocking",
-      "rollback decision authority",
-      "communication and disclosure"
+      "rollback decision authority"
     ],
     "gold_options": {
       "release gate criteria": [
@@ -966,11 +817,6 @@
         "Critical-path and changed-code tests must pass while non-critical failures can be waived",
         "Known flaky or non-blocking tests may fail if regression risk is judged low"
       ],
-      "risk tolerance": [
-        "Delay any release when system risk indicators are elevated",
-        "Permit release if risk is mitigated by canary rollout and monitoring",
-        "Accept moderate operational risk to meet a fixed business deadline"
-      ],
       "rollback trigger": [
         "Rollback immediately on defined error-rate or latency threshold breach",
         "Monitor briefly after release and rollback only if the signal persists",
@@ -981,25 +827,10 @@
         "Deploy only when production error rates fall below the agreed SLO threshold",
         "Deploy in a staggered window that opens once error rates trend downward for 30 minutes"
       ],
-      "canary rollout strategy": [
-        "Skip canary and roll out to 100% of traffic immediately to meet the deadline",
-        "Require a full multi-stage canary (1%, 10%, 50%, 100%) with bake time at each step",
-        "Use an abbreviated canary at 5% and 50% with shortened bake times"
-      ],
       "risk acceptance authority": [
         "Release lead alone may sign off on waiving any blocking signal",
         "Require written risk acceptance from on-call SRE lead and QA lead jointly",
         "Engineering manager sign-off suffices for non-critical waivers, on-call lead required for system risk"
-      ],
-      "flaky test handling": [
-        "Auto-retry failing tests and pass if any retry succeeds",
-        "Treat all failing tests as blocking until root-caused regardless of flakiness history",
-        "Quarantine tests on a documented flaky-list and require ticket plus owner before bypass"
-      ],
-      "post-release monitoring duration": [
-        "Standard monitoring ends 15 minutes after full rollout",
-        "Heightened monitoring with on-call attention for at least 24 hours post-release",
-        "Heightened monitoring for 2 hours then revert to standard alerting"
       ],
       "hotfix vs planned release scope": [
         "Treat today's release as a hotfix with reduced regression scope",
@@ -1015,16 +846,11 @@
         "Automated system rolls back unilaterally on threshold breach with no human gate",
         "Rollback requires explicit approval from release lead and on-call SRE",
         "Automated rollback on hard breach, human-confirmed rollback on soft breach"
-      ],
-      "communication and disclosure": [
-        "Release silently and announce only if incidents occur",
-        "Send pre-release notice to all stakeholders and post-release status update with known risks",
-        "Notify only directly affected teams and on-call channels before deploy"
       ]
     },
     "metadata": {
       "difficulty": "medium",
-      "num_issues": 4,
+      "num_issues": 8,
       "source_yaml": "example_usecases_direct_9_missions.yaml",
       "source_mission": "Example 09 - CI/CD Release"
     }
